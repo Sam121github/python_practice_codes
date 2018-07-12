@@ -1,0 +1,10 @@
+# check_even_or_odd
+def checkeven(num):
+    if num % 2 == 0:
+        print("number you entered was even")
+    elif num % 2 !=0:
+        print("number you entered was odd")
+
+
+number = int(input("enter the number you want to check\n"))
+checkeven(number)
