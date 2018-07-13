@@ -1,0 +1,30 @@
+# random guessing game
+import random
+
+
+def guessgame():
+    User_name = input("Enter your name participant\n")
+    rand = random.randrange(0, 10)
+    guess_no = 0
+    count = 1
+    while guess_no != rand:
+        guess_no = int(input("Enter your guess within your range \n"))
+
+        if guess_no > rand:
+
+            print("You guessed too high!!", User_name)
+            count += 1
+
+        elif guess_no < rand:
+            print("You guessed too low!!", User_name)
+            count += 1
+
+        elif guess_no < 0 | guess_no > 10:
+            print("Wrong input")
+        else:
+
+            print("You win!!!!  Thank you for playing", User_name)
+            print("You took: ", count,"guesses" )
+
+
+guessgame()
